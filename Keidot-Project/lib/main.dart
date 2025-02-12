@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:test_app/Services/transaction/service_transaction_controller.dart';
 import 'package:test_app/config/theme/app_theme.dart';
 import 'package:test_app/presentation/screens/login_screen.dart';
+import 'package:test_app/presentation/screens/new_worker.dart'; // Importa la pantalla NewWorkerScreen
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +16,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp( // Cambia MaterialApp por GetMaterialApp
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 2).theme(),
-      home: const LoginPage(), // Página de inicio => Recuerrda cambiar esto por el Login despues de la pruebas de Stripe
+      home: const LoginPage(), // Inicia en la pantalla NewWorkerScreen
     );
   }
 }
